@@ -1,0 +1,101 @@
+.contacts-section {
+  margin-bottom: 0;
+
+  @media screen and (min-width: $bp-large-tablet) {
+    margin-bottom: 96px;
+  }
+
+  &__container {
+    max-width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px;
+    justify-content: center;
+
+    @media screen and (min-width: $bp-large-tablet) {
+      flex-direction: row;
+      justify-content: unset;
+    }
+  }
+
+  &__iframe {
+    margin: 0 -20px;
+    height: 232px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin: 0 -100px;
+      height: 300px;
+    }
+
+    @media screen and (min-width: $bp-large-tablet) {
+      flex-basis: 605px;
+      border-radius: 32px;
+      margin: 0;
+      height: auto;
+    }
+  }
+
+  &__form-container {
+    width: min(100%, 480px);
+    align-self: center;
+    background-color: var(--color-primary-dark);
+    padding: 42px 24px;
+    border-radius: 32px;
+    background-image: url('../images/contacts-background-pattern.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (min-width: $bp-tablet) {
+      width: min(100%, 768px);
+    }
+
+    @media screen and (min-width: $bp-large-tablet) {
+      flex-basis: 420px;
+      flex-grow: 1;
+      margin: 0;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      padding: 48px 56px;
+    }
+  }
+
+  &__form-heading {
+    color: var(--color-primary-light);
+    margin: 0 auto 24px;
+    max-width: 274px;
+    text-align: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__input {
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto 8px;
+
+    &:hover {
+      color: var(--color-primary-light);
+    }
+  }
+
+  &__comment {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--color-secondary-light);
+    text-align: center;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  &__link {
+    color: var(--color-secondary-light);
+    text-decoration-skip-ink: none;
+  }
+}

@@ -1,0 +1,196 @@
+.footer {
+  background-color: var(--color-primary-dark);
+  background-image: url(../images/footer-background-pattern.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 32px 0 66px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 56px 100px;
+  }
+
+  &__container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    width: 178px;
+
+    @media screen and (min-width: $bp-tablet) {
+      width: auto;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: unset;
+    }
+
+    @media screen and (min-width: $bp-large-tablet) {
+      gap: max(8%, 10px);
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: max(16%, 20px);
+    }
+
+    &::after {
+      @media screen and (min-width: $bp-large-tablet) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        content: '';
+        width: 250px;
+        height: 150px;
+        background-image: url(../images/vials.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/vials@2x.png');
+      }
+    }
+  }
+
+  &__nav,
+  &__address {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      align-items: unset;
+    }
+
+    @media screen and (min-width: $bp-large-tablet) {
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__nav {
+    flex-direction: column;
+    gap: 42px;
+
+    @media screen and (min-width: $bp-large-tablet) {
+      gap: 20px;
+    }
+
+    @media screen and (min-width: $bp-large-tablet) {
+      gap: 16%;
+      flex-direction: row;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 38%;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+    }
+  }
+
+  &__address {
+    flex-direction: column-reverse;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    @media screen and (min-width: $bp-large-tablet) {
+      flex-direction: row;
+      gap: 14%;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 32%;
+    }
+  }
+
+  &__list-item {
+    display: none;
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+    }
+  }
+
+  &__logo {
+    width: 57px;
+    height: 30px;
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 83px;
+      height: 42px;
+    }
+  }
+
+  &__link {
+    color: var(--color-primary-light);
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 16px;
+    transition: color 0.2s;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 16px;
+    }
+
+    &:hover {
+      color: var(--color-brand);
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 24px;
+    }
+  }
+
+  &__icon {
+    fill: var(--color-primary-light);
+    width: 32px;
+    height: 32px;
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  &__comment {
+    color: var(--color-secondary-light);
+    font-size: 13px;
+
+    &--inside {
+      display: none;
+
+      @media screen and (min-width: $bp-tablet) {
+        display: block;
+      }
+    }
+
+    &--outside {
+      @media screen and (min-width: $bp-tablet) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+.about-us-section {
+  margin-bottom: 176px;
+  @media screen and (min-width: $bp-large-tablet) {
+    margin-bottom: -24px;
+  }
+
+  @media screen and (min-width: 1160px) {
+    margin-bottom: 176px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media screen and (min-width: 1160px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    margin-top: 50px;
+    max-width: 700px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 22px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__images {
+    position: relative;
+
+    @media screen and (min-width: $bp-large-tablet) {
+      height: 700px;
+      flex-basis: 515px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__image {
+    display: none;
+    border-radius: 50%;
+    position: absolute;
+
+    @media screen and (min-width: $bp-large-tablet) {
+      display: block;
+    }
+
+    &--second {
+      left: 347px;
+      @media screen and (min-width: 1160px) {
+        left: auto;
+        bottom: 0;
+        right: 15px;
+      }
+    }
+  }
+
+  &__star {
+    position: absolute;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    &--large {
+      fill: var(--color-secondary-brand);
+      top: 20px;
+      right: 20px;
+      animation-name: spin;
+      @media screen and (min-width: $bp-large-tablet) {
+        top: 270px;
+        left: 637px;
+      }
+
+      @media screen and (min-width: 1160px) {
+        animation-name: spin-translate;
+        top: 350px;
+        left: 125px;
+      }
+    }
+
+    &--medium {
+      display: none;
+      fill: var(--color-brand);
+      top: 60px;
+      right: 15px;
+      animation-name: spin;
+      @media screen and (min-width: 1160px) {
+        display: block;
+        animation-name: spin-translate;
+      }
+    }
+
+    &--small {
+      display: none;
+      fill: var(--color-secondary-light);
+      top: 260px;
+      right: 35px;
+      animation-name: spin;
+      @media screen and (min-width: 1160px) {
+        display: block;
+        animation-name: spin-translate-small;
+      }
+    }
+  }
+}
+
+@keyframes spin-translate {
+  0% {
+    transform: rotate(0deg);
+    transform: rotate(0deg) translateY(15px) rotate(0deg);
+    scale: 0.75;
+  }
+
+  50% {
+    transform: rotate(360deg);
+    transform: rotate(180deg) translateY(15px) rotate(180deg);
+    scale: 1;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform: rotate(360deg) translateY(15px) rotate(360deg);
+    scale: 0.75;
+  }
+}
+
+@keyframes spin-translate-small {
+  0% {
+    transform: rotate(0deg);
+    transform: rotate(0deg) translateY(5px) rotate(0deg);
+    scale: 1;
+  }
+
+  50% {
+    transform: rotate(360deg);
+    transform: rotate(180deg) translateY(5px) rotate(180deg);
+    scale: 0.75;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform: rotate(360deg) translateY(5px) rotate(360deg);
+    scale: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

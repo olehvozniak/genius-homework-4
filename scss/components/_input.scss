@@ -1,0 +1,24 @@
+.input {
+  border: 2px solid var(--color-secondary-light);
+  border-radius: 32px;
+  background-color: transparent;
+  color: var(--color-primary-light);
+  font-size: 13px;
+  padding: 16px 24px;
+  width: 100%;
+  display: block;
+  transition: background-color 0.2s;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 18px 32px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-secondary-light);
+  }
+
+  &::placeholder {
+    color: var(--color-primary-light);
+  }
+}

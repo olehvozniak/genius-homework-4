@@ -1,0 +1,84 @@
+.hero-section {
+  background-image: url('../images/hero-section-background.png');
+  background-size: 768px auto;
+  background-repeat: no-repeat;
+  margin-bottom: -40px;
+  background-position: 60%;
+  position: relative;
+  padding: 58px 20px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 150px 100px;
+    background-size: 1440px auto;
+    background-position: center;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/hero-section-background@2x.png');
+  }
+
+  &__container {
+    max-width: 320px;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    @media screen and (min-width: $bp-tablet) {
+      max-width: 530px;
+      margin-left: 100px;
+    }
+  }
+
+  &__title {
+    color: var(--color-brand);
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    line-height: 0.8;
+    font-size: 54px;
+    text-align: center;
+    margin-bottom: 32px;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 140px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    @media screen and (min-width: $bp-tablet) {
+      text-align: left;
+    }
+  }
+
+  &__order {
+    max-width: 190px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $bp-tablet) {
+      max-width: 240px;
+      margin: 0 0;
+    }
+  }
+
+  &__button {
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__comment {
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--color-secondary-dark);
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+}

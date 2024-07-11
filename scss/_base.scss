@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+body {
+  color: var(--color-primary-dark);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
+  margin: 0;
+}
+
+main {
+  background-image: url('../images/background-mobile.png');
+  background-repeat: no-repeat;
+  background-position: 50% 800px;
+  background-size: 100% 768px;
+
+  @media screen and (min-width: 360px) {
+    background-position: 50% 720px;
+  }
+
+  @media screen and (min-width: 480px) {
+    background-position: 50% 660px;
+  }
+
+  @media screen and (min-width: 560px) {
+    background-position: 50% 620px;
+  }
+
+  @media screen and (min-width: $bp-tablet) {
+    background-image: url('../images/background.jpg');
+    background-position: 50% 1250px;
+    background-size: unset;
+  }
+
+  @media screen and (min-width: $bp-large-tablet) {
+    background-position: 50% 1500px;
+  }
+
+  @media screen and (min-width: 1160px) {
+    background-position: 50% 1350px;
+  }
+}
+
+a {
+  display: inline-block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+h1,
+h2 {
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
+}
+
+address {
+  font-style: normal;
+}

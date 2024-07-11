@@ -1,0 +1,25 @@
+.procedures-section {
+  &__container {
+    overflow: hidden;
+  }
+
+  &__slider {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__list {
+    margin-bottom: 32px;
+    max-width: 420px;
+
+    @media screen and (min-width: $bp-tablet) {
+      max-width: 840px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      max-width: none;
+    }
+  }
+}
